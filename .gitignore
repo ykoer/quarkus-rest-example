@@ -1,0 +1,20 @@
+# IDEA directory and file based projects
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# Java artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# MacOS files
+.DS_Store
+
+# Quarkus log file
+*.log
