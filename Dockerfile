@@ -7,7 +7,7 @@ WORKDIR /project
 RUN mvn -Duser.home=/builder/home -B install -Dmaven.test.skip=true
 
 # copy jar's into runtime container
-FROM openjdk:11
+FROM registry.access.redhat.com/openjdk/openjdk-11-rhel7
 ADD target/*-runner.jar /work/application-runner.jar
 ADD target/lib/ /work/lib
 WORKDIR /work

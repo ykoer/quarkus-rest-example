@@ -14,7 +14,7 @@ RUN  native-image -J-Djava.util.logging.manager=org.jboss.logmanager.LogManager 
      -H:-SpawnIsolates -H:+JNI --no-server -H:-UseServiceLoaderFeature -H:+StackTrace \
      -H:Name=application -H:Path=/tmp
 
-FROM  registry.fedoraproject.org/fedora-minimal
+FROM registry.access.redhat.com/rhel7/rhel-atomic
 RUN mkdir -p /work
 COPY --from=nativebuilder /tmp/application /work
 EXPOSE 8080
