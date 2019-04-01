@@ -24,12 +24,6 @@ public class UserResource {
 
     @GET
     @Path("{username}")
-    public long count() {
-        return userService.countUsers();
-    }
-
-    @GET
-    @Path("{username}")
     public Response get(@PathParam("username") String userName) {
 
         Optional<User> user = userService.getUser(userName);

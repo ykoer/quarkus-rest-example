@@ -77,7 +77,7 @@ public class UserResourceTest {
             .get("/users/{userName}")
         .then()
             .statusCode(200)
-            .log().body()
+            //.log().body()
             .body ("userName", equalTo ("user3"))
         ;
 
